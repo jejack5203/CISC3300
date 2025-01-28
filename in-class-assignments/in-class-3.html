@@ -1,25 +1,34 @@
 <html>
-	<table>
-		<tr>
-			<th> <b>Class</th>
-			<th> <b>Semester</th>
-			<th> <b>Grade</th>
-		</tr>
-		<tr>
-			<td>Intro to Robotics</td>
-			<td>Fall 2023</td>
-			<td>A</td>
-		</tr>
-		<tr>
-			<td>CompSci 2</td>
-			<td>Fall 2021</td>
-			<td>A</td>
-		</tr>
-		<tr>
-			<td>Theatre</td>
-			<td>Spring 2025</td>
-			<td>B</td>
-		</tr>
-	</table>
+        <head>
+                <style>
+body {
+        display: flex;
+        align-items: center;
+	justify-content: center;
+	margin: 0;
 
+}
+
+.box {
+
+        display: inline-block;
+
+}
+
+.child {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        margin: 5px;
+        border: 1px solid black;
+}
+                </style>
+        </head>
+        <body>
+                <div class="box">
+                        <div class="child"></div>
+                        <div class="child"></div>
+                        <div class="child"></div>
+                </div>
+        </body>
 </html>
