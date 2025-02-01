@@ -1,0 +1,9 @@
+1. __Hex__ values represent values for red, green and blue in hexadecimal code.
+
+2. ___Typography____ can be defined as “the art and technique of arranging type in order to make language visible”
+
+3. The ___font-face____ rule sets a new font to use that is made via font family
+
+4. __List-style_____ shorthand property allows you to set all the list style properties at once
+
+5. The ___object-fit____ CSS property sets how the content of a replaced element, such as an <img> or <video>, should be resized to fit its container.
