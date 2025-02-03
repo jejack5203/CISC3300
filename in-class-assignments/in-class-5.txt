@@ -1,0 +1,8 @@
+1. __relative__ positioning moves an element from the position it would be in normal flow.
+
+2. ___layout systems____ set rules and standards for how a layout should flow and position elements
+in a more systematic way
+
+3. ________ defines an element as a flex container
+
+4. __CSS Grids_____ is a two dimensional CSS layout system
