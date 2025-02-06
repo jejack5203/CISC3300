@@ -1,0 +1,9 @@
+1. __CSS framework___ is a collection of CSS stylesheets that are prepped and ready to use.
+
+2. ___Bootstrap components____ are pre-styled UI elements like buttons, forms, navbars, and more, built with
+HTML, CSS, and JavaScript.
+
+3. ___Responsive Design____creates dynamic changes to the appearance of a website, depending on the
+screen size and orientation of the device being used to view it.
+
+4. ___The meta tag with viewport attribute____ is needed to get media queries to work
