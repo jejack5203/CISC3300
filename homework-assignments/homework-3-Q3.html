@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title></title>
+
+<style>
+
+.flex{
+	display: flex;
+
+
+}
+
+.flex-items{
+	background-color: purple;
+	width: 100px;
+	height: 100px;
+	margin: 5px;
+
+
+}
+			@media screen and (max-width: 499px) {
+				.flex {
+					flex-direction: column;
+				}
+			}
+			@media screen and (min-width: 500px) {
+				.flex{
+					flex-direction: row;
+				}
+			}
+</style>
+	</head>
+	<body>
+		<div class="flex">
+			<div class="flex-items"></div>
+			<div class="flex-items"></div>
+			<div class="flex-items"></div>
+		</div>
+
+	</body>
+
+</html>
+
