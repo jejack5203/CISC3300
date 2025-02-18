@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>DOM</title>
-    </head>
-    <body>
+<head>
+    <title>In-class-9</title>
+    <style>
+        #clickable-div {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="clickable-div">initial text</div>
 
-        <div id="first-div" class="first">
-            test
-        </div>
+    <script>
+        function changeTextAndColor() {
+            let div = document.getElementById('clickable-div');
+            div.innerHTML = "added text!";
+        }
 
-
-        <script>
-          const newDiv = document.createElement('first-div');
-          const newDivTextContent = document.createTextNode('added text!');
-          
-          const firstDivClass = document.getElementById('first-div');
-          firstDivClass.setAttribute('style', 'color: yellow')
-
-        </script>
-
-    </body>
+        document.getElementById('clickable-div').addEventListener('click', changeTextAndColor);
+    </script>
+</body>
 </html>
+
