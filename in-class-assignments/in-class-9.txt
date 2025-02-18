@@ -1,0 +1,10 @@
+1. The ___DOM_____ represents the document as nodes and objects; that way, programming languages can interact with the page.
+
+2. To select a dom element by its id we can use _getElementByID()____.
+
+3. If you add HTML to a page using innerHTML (or several jQuery methods), you need to be aware of __XSS______ otherwise, an attacker could gain access to your users' accounts.
+
+4. HTML events are ____actions____ that happen to HTML elements.
+
+5. ___event listener_____ are a more recent approach to handling events. They can deal with more than one function at a time
+
