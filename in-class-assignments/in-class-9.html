@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>DOM</title>
+    </head>
+    <body>
+
+        <div id="first-div" class="first">
+            test
+        </div>
+
+
+        <script>
+          const newDiv = document.createElement('first-div');
+          const newDivTextContent = document.createTextNode('added text!');
+          
+          const firstDivClass = document.getElementById('first-div');
+          firstDivClass.setAttribute('style', 'color: yellow')
+
+        </script>
+
+    </body>
+</html>
