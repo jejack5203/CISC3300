@@ -1,0 +1,14 @@
+1. __jQuery___ is a lightweight, "write less, do more", JavaScript library
+
+2. __jQuery___ makes our lives easier when doing common HTML/CSS/JS tasks.
+
+3. ___AJAX____ allows web pages to be updated asynchronously by exchanging data with a web
+server behind the scenes.
+
+4. ___HTTP____ how the internet handles communication between clients and servers, is done by
+requests and responses.
+
+5. ___JSON____ is a text-based data format following JavaScript object syntax.
+
+6. ___API____ is a way for two or more computer programs or components to communicate with
+each other.
