@@ -1,0 +1,9 @@
+1. variable names start with a __$____ in php
+
+2. ___associative___ behave a bit like objects in JS or dictionaries in python
+
+3. A template literal in PHP would be __using a variable inside a string_____
+
+4. php is loosely typed - we don’t set types for variables, they are ___assigned at run time_____
+
+5. The __include(or require)____ statement takes all the text/code/markup that exists in the specified file and copies it into the file that uses the include statement.
