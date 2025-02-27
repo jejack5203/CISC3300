@@ -1,0 +1,23 @@
+1. What is the DOM? What is meant by the DOM tree?
+
+The DOM is a programming interface for web documents. The DOM tree is the model of a webpage.
+
+2. What is an XSS attack? How do they work? How can you guard against them?
+
+An XSS attack is a intruder gaining access to your user account. This occurs when you add HTML to a page using innerHTML. If a malicious user adds code to an input that is eventually generated as html, that code could potentially be run for different users.
+
+3. What is an event in JavaScript? What kind of events can you respond to with code?
+
+Events are things that happen to HTML elements. Events trigger code that we can react to. UI, Keyboard, and Mouse events can respond with code.
+
+4. How does a DOM eventListener work? What are the parameters it is expecting?
+
+A DOM eventListener handles events by dealing with more than 1 function at a time. Sets up a function that will be called whenever the event is delievered to the target. The parameters it is expecting is the event by name.
+
+5. What is jQuery? Why use it? How do we load jQuery onto a page?
+
+jQuery is a javascript library. It makes using javascript easier on a website. We can use a CDN to load jQuery onto a page.
+
+6. What is AJAX? JSON? The HTTP method types and what they do?
+
+AJAX allows web pages to be updated asynchronously by exchanging data with a web server behind the scenes. JSON is a text-based data format following JavaScript object syntax that uses human-readable text to store and transmit data objects consisting of attribute–value pairs and arrays. The HTTP method types are GET, POST, PUT, PATCH and DELETE. GET retrieves data. POST submits an entity to the specified resource. PUT replaces all current representations of the target resource with the request payload. PATCH partially changes a resource. DELETE deletes a resource.
