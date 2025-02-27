@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>In Class Assignment 2/27</title>
+        <meta charset="UTF-8" />
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <style>
+            .clicker {
+                width: 200px;
+                height: 70px;
+                background-color: goldenrod;
+                color: black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                font-size: 20px;
+            }
+            .name{
+                font-size: 25px;
+                color: hotpink;
+                display: block;    
+                
+            }
+            .price{
+                background-color: pink;
+                color: red;
+                display: inline;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="ajax-get" class="clicker">Click This!</button>
+        <div id="business-container"></div>
+        <script>
+            $('#ajax-get').on('click', function () {
+                $.ajax({
+                    url: 'http://localhost',
+                    type: "GET",
+                    dataType: "json",
+                    success: function (data) {
+                        console.log(data);
+                        $.each(data, function (key, value) {
+                            console.log(value)
+                            $('#business-container').append(`
+                              <br><div class="name">${value['name']}</div>
+                              <div class="price">${value['price']}</div><br>
+                            `)
+                        })
+                    }
+                });
+            })
+        </script>
+    </body>
+</html>
