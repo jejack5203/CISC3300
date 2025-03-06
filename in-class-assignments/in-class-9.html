@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>In-class-9</title>
+    <style>
+        #clickable-div {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="clickable-div">initial text</div>
+
+    <script>
+        function changeTextAndColor() {
+            let div = document.getElementById('clickable-div');
+            div.innerHTML = "added text!";
+        }
+
+        document.getElementById('clickable-div').addEventListener('click', changeTextAndColor);
+    </script>
+</body>
+</html>
+

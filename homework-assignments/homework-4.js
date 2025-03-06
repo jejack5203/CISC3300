@@ -74,15 +74,11 @@ console.log(newSentence);
 
 //Question 7
 
-const ternaryValue = Math.random() * 10;
+const randomNum = Math.random() * 10;
+const ternaryValue = randomNum > 5 ? "Greater than five!" : "Less than five!"
+console.log(randomNum);
 console.log(ternaryValue);
 
-if(ternaryValue > 5) {
-	console.log("Greater than five!");
-
-} else {
-	console.log("Less than five!");
-}
 
 //Question 8
 
@@ -107,7 +103,6 @@ if (1 === '1') {
 
 //Question 10
 
-results.forEach(function(i) {
-	console.log(i + ' is cute!');
-});
+const cuteNess = results.map(cat => cat + " is cute!");
+console.log(cuteNess);
 

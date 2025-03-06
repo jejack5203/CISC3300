@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>in-class 2/24</title>
+        <script src= "./in-class-11.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    </head>
+    <body>
+
+        <div id="html-container"></div>
+
+        <script>
+            $('#http-get').on('click', function () {
+                $.ajax({
+                    url: 'http://localhost/html',
+                    type: "GET",
+                    dataType: "json",
+                    success: function (data) {
+                        
+                        console.log(data);
+
+                        $.each(data, function (key, value) {
+                          console.log(value)
+                            $('#html-container').append(`
+                              <div class="user">${value['name']}</div>
+                            `)
+                        })
+                    }
+                });
+            })
+
+        </script>
+    </body>
+</html>
