@@ -1,0 +1,12 @@
+1. SQL ___relationships___ are the established associations between two or more tables.
+
+2. For every record in the primary table, there are one or more related records in the
+foreign table: ___one to one_____
+
+3. The __join_____ keyword allows you to request data from more than one table
+
+4. The __left join____ returns all records from the left table (table1), and the matching records
+from the right table
+
+5. An ___aggregate____ function is a function that performs a calculation on a set of values, and
+returns a single value.
