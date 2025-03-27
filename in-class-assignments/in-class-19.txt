@@ -1,0 +1,11 @@
+1. A built in class that comes packaged with PHP to make it very easy for you to interact
+with databases, represents and manages the connection to the database: __PDOs______
+
+2. The__DSN_____ is a string that contains information about our connection to the database
+
+3. In homeworks going forward/final project it will be a deduction of points if you submit _.env file or the information intended to be on it_____!!!
+
+4. __A prepared statement____ is a parameterized and reusable SQL query which forces the developer to write
+the SQL command and the user-provided data separately.
+
+5. A __SQL Injection____ is when a hacker tries to run malicious sql code in a database.
