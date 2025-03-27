@@ -38,4 +38,4 @@ select * from notes limit 1 offset 1;
 
 --select all notes that have descriptions which contain vowels
 
-select * from notes where description like '%aeiou%';
+select * from notes where description like '%a%' or description like '%e%' or description like '%i%' or description like '%o%' or description like '%u%';
