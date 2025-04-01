@@ -3,17 +3,14 @@ CREATE DATABASE `inclass_20`;
 CREATE TABLE `posts`
 (
     `id`        int(11) NOT NULL AUTO_INCREMENT,
-    `firstName`      varchar(80) NOT NULL,
-    `lastName`      varchar(80) NOT NULL,
-    `email`         varchar(254),
+    `title`      varchar(80) NOT NULL,
+    `description`      text NOT NULL,
     primary key (`id`)
+
 );
 
-insert into posts (firstName, lastName, email)
-values ('Jodie', 'Jackson', 'test1@example.com');
+insert into posts (title, description)
+values ('post1', 'Catcher in the Rye');
 
-insert into posts (firstName, lastName, email)
-values ('Black', 'Jack', 'test2@example.com');
-
-insert into posts (firstName, lastName, email)
-values ('Jake', 'Minns', 'test5@example.com');
+insert into posts (title, description)
+values ('post2', 'Jack', 'A Chile Called It');

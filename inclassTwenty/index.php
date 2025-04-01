@@ -1,7 +1,7 @@
 <?php
 require_once "./models/Model.php";
-require_once "./models/User.php";
-require_once "./controllers/UserController.php";
+require_once "./models/Posts.php";
+require_once "./controllers/PostsController.php";
 
 //set our env variables
 $env = parse_ini_file('./.env');
@@ -11,7 +11,7 @@ define('DBHOST', $env['DBHOST']);
 define('DBUSER', $env['DBUSER']);
 //define('DBPASS', $env['DBPASS']);
 
-use controllers\UserController;
+use controllers\PostsController;
 
 //get uri without query strings
 $uri = strtok($_SERVER["REQUEST_URI"], '?');
@@ -27,56 +27,56 @@ $uriArray = explode("/", $uri);
 if ($uriArray[1] === 'api' && $uriArray[2] === 'posts' && $_SERVER['REQUEST_METHOD'] === 'GET') {
     //only id
     $id = isset($uriArray[3]) ? intval($uriArray[3]) : null;
-    $userController = new UserController();
+    $postsController = new PostsController();
 
     if ($id) {
-        $userController->getUserByID($id);
+        $postsController->getPostsByID($id);
     } else {
-        $userController->getAllUsers();
+        $postsController->getAllPosts();
     }
 }
 
 //save user
 if ($uriArray[1] === 'api' && $uriArray[2] === 'posts' && $_SERVER['REQUEST_METHOD'] === 'POST') {
-    $userController = new UserController();
-    $userController->saveUser();
+    $postsController = new PostsController();
+    $postsController->savePosts();
 }
 
 //update user
 if ($uriArray[1] === 'api' && $uriArray[2] === 'posts' && $_SERVER['REQUEST_METHOD'] === 'PUT') {
-    $userController = new UserController();
+    $postsController = new PostsController();
     $id = isset($uriArray[3]) ? intval($uriArray[3]) : null;
-    $userController->updateUser($id);
+    $postsController->updatePosts($id);
 }
 
 //delete user
 if ($uriArray[1] === 'api' && $uriArray[2] === 'posts' && $_SERVER['REQUEST_METHOD'] === 'DELETE') {
-    $userController = new UserController();
+    $postsController = new PostsController();
     $id = isset($uriArray[3]) ? intval($uriArray[3]) : null;
-    $userController->deleteUser($id);
+    $postsController->deletePosts($id);
 }
 
 //views
 
 
 if ($uri === '/new-posts' && $_SERVER['REQUEST_METHOD'] === 'GET') {
-    $userController = new UserController();
-    $userController->usersAddView();
+    $postsController = new PostsController();
+    $postsController->postsAddView();
 }
 
 if ($uriArray[1] === 'posts' && $_SERVER['REQUEST_METHOD'] === 'GET') {
-    $userController = new UserController();
-    $userController->usersUpdateView();
+    $postsController = new PostsController();
+    $postsController->postsUpdateView();
 }
 
 if ($uriArray[1] === 'delete-posts' && $_SERVER['REQUEST_METHOD'] === 'GET') {
-    $userController = new UserController();
-    $userController->usersDeleteView();
+    $postsController = new PostsController();
+    $postsController->postsDeleteView();
 }
 
 if ($uriArray[1] === '' && $_SERVER['REQUEST_METHOD'] === 'GET') {
-    $userController = new UserController();
-    $userController->usersView();
+    $postsController = new PostsController();
+    $postsController->postsView();
 }
 
 //include '../public/assets/views/notFound.html';
