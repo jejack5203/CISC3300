@@ -13,7 +13,7 @@ class Posts extends Model {
         return $this->fetchAll($query);
     }
 
-    public function getUserById($id){
+    public function getPostsById($id){
         $query = "select * from posts where id = :id";
         return $this->fetchAllWithParams($query, ['id' => $id])[0] ?? null;
     }
