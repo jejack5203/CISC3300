@@ -1,7 +1,7 @@
 <?php
 require_once "./app/models/Model.php";
-require_once "./app/models/User.php";
-require_once "./app/controllers/UserController.php";
+require_once "./app/models/Bakery.php";
+require_once "./app/controllers/BakeryController.php";
 
 //set our env variables, remember con
 $env = parse_ini_file('./.env');
@@ -10,7 +10,7 @@ define('DBHOST', $env['DBHOST']);
 define('DBUSER', $env['DBUSER']);
 define('DBPASS', $env['DBPASS']);
 
-use app\controllers\UserController;
+use app\controllers\BakeryController;
 
 //get uri without query strings
 $uri = strtok($_SERVER["REQUEST_URI"], '?');
@@ -27,12 +27,12 @@ $uriArray = explode("/", $uri);
 if ($uriArray[1] === 'api' && $uriArray[2] === 'bakery' && $_SERVER['REQUEST_METHOD'] === 'GET') {
     //only id
     $id = isset($uriArray[3]) ? intval($uriArray[3]) : null;
-    $userController = new UserController();
+    $bakeryController = new BakeryController();
 
     if ($id) {
-        $userController->getUserByID($id);
+        $bakeryController->getBakeryByID($id);
     } else {
-        $userController->getUsers();
+        $bakeryController->getBakery();
     }
 }
 
@@ -41,12 +41,12 @@ if ($uriArray[1] === 'api' && $uriArray[2] === 'bakery' && $_SERVER['REQUEST_MET
 
 if ($uriArray[1] === 'bakery' && $_SERVER['REQUEST_METHOD'] === 'GET') {
     $id = isset($uriArray[2]) ? intval($uriArray[2]) : null;
-    $userController = new UserController();
+    $bakeryController = new BakeryController();
 
     if ($id) {
-        $userController->userDetailsView();
+        $bakeryController->bakeryDetailsView();
     } else {
-        $userController->usersView();
+        $bakeryController->bakeryView();
     }
 
 }
