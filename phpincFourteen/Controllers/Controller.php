@@ -10,7 +10,7 @@ class PostController
         $userModel = new User();
         $users = $userModel->getArray($arg);
         echo json_encode($users);
-        echo 'hi';
+      //  echo 'hi';
         exit();
     }
 
